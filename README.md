@@ -7,6 +7,7 @@ Top-Down Horror
 Objective: Subdue and terminate the runaway Shrek by any means neccessary
 
 Instructions:
-1. Run main method of GamePanel class
-2. Press <tab> key to unlock movement
-3. Use left and right arrow keys to move Wazowski
+1. Set computer volume to highest setting (subtle game sounds are not very powerful)
+2. Run main method of GamePanel class
+3. Press <tab> key to unlock movement
+4. Use left and right arrow keys to move Wazowski
