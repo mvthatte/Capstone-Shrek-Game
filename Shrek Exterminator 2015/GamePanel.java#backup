@@ -1,0 +1,55 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.geom.Ellipse2D;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GamePanel extends JPanel
+{
+    
+       int x = 0;
+       int y = 0;
+       int x2 = 1;
+       int y2 = 1;
+       
+       private void moveShrek()
+       {
+           if (x + x2 < 0)
+			x2 = 1;
+		if (x + x2 > getWidth() - 30)
+			x2 = -1;
+		if (y + y2 < 0)
+			y2 = 1;
+		if (y + y2 > getHeight() - 30)
+			y2 = -1;
+       }
+        
+    public void paint(Graphics g)
+    {
+        super.paint(g);
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.fillOval(x,y,30,30);
+    }
+    
+    public static void main(String[]args) throws InterruptedException
+    {
+        JFrame frame = new JFrame("Shrek Simulator 2015");
+        GamePanel game = new GamePanel();
+        
+        frame.add(game);
+        frame.setSize(300,300);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        while (true)
+        {
+            game.moveShrek();            
+            game.repaint();
+            Thread.sleep(10);
+        }
+    }
+}
+    

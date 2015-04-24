@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=game
+comment0.target=Background(GamePanel)
+comment1.params=g
+comment1.target=void\ paint(java.awt.Graphics2D)
+numComments=2
